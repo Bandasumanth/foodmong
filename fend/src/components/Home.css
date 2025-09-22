@@ -1,0 +1,55 @@
+.home-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.food-items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.food-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-card .card-content {
+    padding: 15px;
+}
+
+.food-card h3 {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.food-card p {
+    margin: 0 0 15px;
+    color: #e44d26;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.food-card button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+}
+
+.food-card button:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,44 @@
+.header {
+    background-color: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #e44d26;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a, .nav-links button {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+
+.nav-links a:hover, .nav-links button:hover {
+    color: #e44d26;
+}
+
+.logout-btn {
+    background-color: #e44d26;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #c23e1e;
+}

@@ -1,0 +1,125 @@
+/* src/components/Services/Services.css */
+
+.services-section {
+    background: #F8F9FA;
+    padding: 32px 16px;
+    font-family: 'Inter', 'Poppins', sans-serif;
+  }
+  
+  .services-title {
+    color: #2C3E50;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .services-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: stretch;
+  }
+  
+  .services-search,
+  .services-select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #27AE60;
+    font-size: 1rem;
+    background: #FFFFFF;
+    color: #2C3E50;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  @media (min-width: 600px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 900px) {
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .service-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .service-card:hover {
+    box-shadow: 0 4px 16px rgba(255, 107, 53, 0.13);
+  }
+  
+  .service-card-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  
+  .service-card-title {
+    color: #FF6B35;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .service-card-desc {
+    color: #2C3E50;
+    flex: 1;
+    margin: 0;
+  }
+  
+  .service-card-meta {
+    display: flex;
+    gap: 8px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+  
+  .service-card-category {
+    background: #27AE60;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .service-card-location {
+    background: #3498DB;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .service-card-status {
+    background: #F8F9FA;
+    color: #2C3E50;
+    border: 1px solid #2C3E50;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .service-card-status.available {
+    background: #27AE60;
+    color: #fff;
+    border: none;
+  }
+  .service-card-status.unavailable {
+    background: #FF6B35;
+    color: #fff;
+    border: none;
+  }
+  
