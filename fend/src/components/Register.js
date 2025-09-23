@@ -9,16 +9,22 @@ const Register = () => {
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post('https://foodmong-bendd.onrender.com/api/auth/register', formData);
-      alert('Registration successful! Please log in.');
-      navigate('/login');
-    } catch (err) {
-      console.error(err.response.data);
-    }
-  };
+  const [loading, setLoading] = useState(false);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  try {
+    await axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, formData);
+    alert('Registration successful! Please log in.');
+    navigate('/login');
+  } catch (err) {
+    console.error(err.response?.data || err.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="auth-container">
