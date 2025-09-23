@@ -17,7 +17,7 @@ const PaymentButton = ({ amount, onPaymentSuccess }) => {
         handler: async (response) => {
           // This function is called on successful payment
           // Call your backend for signature verification
-          await axios.post('http://localhost:5000/api/payment/verify', response);
+          await axios.post('https://foodmong-bendd.onrender.com/api/payment/verify', response);
           onPaymentSuccess();
         },
         prefill: {
