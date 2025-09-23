@@ -1,6 +1,7 @@
 import { createContext, useState } from 'react';
 
 const AuthContext = createContext();
+const url = "https://foodmong-backend.onrender.com";
 
 export const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(!!localStorage.getItem('token'));
