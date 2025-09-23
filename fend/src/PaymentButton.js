@@ -5,7 +5,7 @@ import axios from 'axios';
 const PaymentButton = ({ amount, onPaymentSuccess }) => {
   const handlePayment = async () => {
     try {
-      const { data: { order } } = await axios.post('https://foodmong-bendd.onrender.com/api/payment/create-order', { amount });
+      const { data: { order } } = await axios.post('https://foodmong-bkend.onrender.com/api/payment/create-order', { amount });
 
       const options = {
         key: 'rzp_test_yourkeyid', // Your Razorpay Key ID
