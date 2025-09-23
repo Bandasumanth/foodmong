@@ -11,7 +11,7 @@ const Cart = ({ cartItems, onRemoveFromCart, onCheckout }) => {
 
   const handlePayment = async () => {
     try {
-      const { data } = await axios.post('http://localhost:5000/api/payment/create-order', {
+      const { data } = await axios.post('https://foodmong-bendd.onrender.com/api/payment/create-order', {
         amount: totalPrice,
       });
 
