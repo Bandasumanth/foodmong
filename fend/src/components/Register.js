@@ -28,8 +28,7 @@ const handleSubmit = async (e) => {
   return (
     <div className="auth-container">
     
-
-
+{loading && <p>Loading...</p>}
       <form onSubmit={handleSubmit} className="auth-form">
         <h2>Register</h2>
         <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
