@@ -6,7 +6,7 @@ import './Auth.css';
 const Register = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const navigate = useNavigate();
-
+const [loading, setLoading] = useState(false); 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
 
