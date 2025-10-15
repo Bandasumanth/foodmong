@@ -9,7 +9,8 @@ const Register = () => {
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const [loading, setLoading] = useState(false);
+// If not used, remove it
+const [loading, setLoading] = useState(false);
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -28,6 +29,9 @@ const handleSubmit = async (e) => {
 
   return (
     <div className="auth-container">
+    // If you need it later, make sure it's used in JSX
+{loading && <p>Loading...</p>}
+
       <form onSubmit={handleSubmit} className="auth-form">
         <h2>Register</h2>
         <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
