@@ -27,22 +27,22 @@ jobs:
 
       # Step 3: Install backend dependencies
       - name: Install Backend Dependencies
-        working-directory: ./backend
+        working-directory: ./bend
         run: npm install
 
       # Step 4: Run backend tests (if you have)
       - name: Run Backend Tests
-        working-directory: ./backend
+        working-directory: ./bend
         run: npm test || echo "No backend tests"
 
       # Step 5: Install frontend dependencies
       - name: Install Frontend Dependencies
-        working-directory: ./frontend
+        working-directory: ./fend
         run: npm install
 
       # Step 6: Build the frontend
       - name: Build Frontend
-        working-directory: ./frontend
+        working-directory: ./fend
         run: npm run build
 
       # Step 7: Upload build artifacts (for deployment)
@@ -50,4 +50,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: frontend-build
-          path: ./frontend/build
+          path: ./fend/build
