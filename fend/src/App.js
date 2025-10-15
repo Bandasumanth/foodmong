@@ -34,6 +34,7 @@ const App = () => {
       <Routes>
         <Route path="/login" element={isAuth ? <Navigate to="/" /> : <Login />} />
         <Route path="/register" element={isAuth ? <Navigate to="/" /> : <Register />} />
+        
         <Route path="/" element={isAuth ? <Home onAddToCart={handleAddToCart} /> : <Navigate to="/login" />} />
         <Route path='/services' element={<Services/>}/>
         <Route path="/cart" element={isAuth ? <Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} onCheckout={handleCheckout} /> : <Navigate to="/login" />} />
